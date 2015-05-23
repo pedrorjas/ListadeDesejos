@@ -40,12 +40,6 @@ public class Detalhes extends Listar_Desejo {
                 preco_Max = params.getString("detalhe_precoMax");
                 loja = params.getString("detalhe_loja");
 
-                /*TextView produto_View = (TextView) findViewById(R.id.detalhes_produto);
-                TextView categoria_View = (TextView) findViewById(R.id.detalhes_categoria);
-                TextView precoMin_View = (TextView) findViewById(R.id.detalhes_preco_min);
-                TextView precoMax_View = (TextView) findViewById(R.id.detalhes_preco_max);
-                TextView loja_View = (TextView) findViewById(R.id.detalhes_loja_achar);*/
-
                 produto_View.setText(nome_produto);
                 categoria_View.setText(categoria);
                 precoMin_View.setText(preco_Min);
@@ -74,7 +68,7 @@ public class Detalhes extends Listar_Desejo {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_detalhes, menu);
+        //getMenuInflater().inflate(R.menu.menu_detalhes, menu);
         return true;
     }
 
@@ -86,9 +80,7 @@ public class Detalhes extends Listar_Desejo {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
         return super.onOptionsItemSelected(item);
     }
 }
