@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pedro.listadedesejos" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Aboult"
+            android:label="@string/title_activity_aboult" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Adicionar_Desejos"
+            android:label="@string/title_activity_adicionar_desejos" />
+        <activity
+            android:name=".Alterar_Desejos"
+            android:label="@string/title_activity_alterar_desejos" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Detalhes"
+            android:label="@string/title_activity_detalhes" />
+        <activity
+            android:name=".Listar_Desejo"
+            android:label="@string/title_activity_lista_desejos" />
+        <activity
+            android:name=".Excluir_Desejo"
+            android:label="@string/title_activity_excluir__desejos" >
+        </activity>
+        <activity
+            android:name=".Inserir_Desejo"
+            android:label="@string/title_activity_inserir__desejos" >
+        </activity>
+        <activity
+            android:name=".Alterar_Desejo"
+            android:label="@string/title_activity_alterar__desejo" >
+        </activity>
+    </application>
+
+</manifest>

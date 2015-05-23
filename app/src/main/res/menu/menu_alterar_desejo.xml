@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.pedro.listadedesejos.Alterar_Desejo">
+
+    <item android:id="@+id/salvar_menu_alt"
+        android:title="@string/app_name"
+        android:icon="@drawable/ic_action_save"
+        app:showAsAction="ifRoom" />
+
+</menu>

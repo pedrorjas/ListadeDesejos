@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.pedro.listadedesejos.Listar_Desejo" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Selecione_um_desejo"
+        android:id="@+id/text_detalhe"
+        android:singleLine="false"
+        android:gravity="center_horizontal|top"
+        android:autoText="false" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lista_produto"
+            android:gravity="center"
+            android:autoText="false"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lista_categoria"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lista_precoMin"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lista_precoMax"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lista_loja_Achar"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_detalhe">
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:id="@+id/lv_lista_desejos"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

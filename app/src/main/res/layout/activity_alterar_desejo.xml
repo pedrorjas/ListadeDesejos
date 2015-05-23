@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TV_id_alt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="ID"
+        android:textSize="18sp"
+        android:gravity="center|left"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Produto:"/>
+
+    <EditText
+        android:id="@+id/ET_produto_alt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        android:textSize="15sp"
+        android:inputType="text|textCapWords|textAutoCorrect"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria:"/>
+
+    <EditText
+        android:id="@+id/ET_categoria_alt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:inputType="text|textCapWords|textAutoCorrect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço Mínimo:"/>
+
+    <EditText
+        android:id="@+id/ET_precoMin_alt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true"
+        android:numeric="decimal"
+        android:phoneNumber="false"
+        android:textSize="15sp"
+        android:inputType="none" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço máximo:"/>
+
+    <EditText
+        android:id="@+id/ET_precoMax_alt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:numeric="decimal"
+        android:textSize="15sp"
+        android:inputType="none" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lojas onde achar:"/>
+
+    <EditText
+        android:id="@+id/ET_loja_achar_alt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:inputType="text|textCapWords|textAutoCorrect"/>
+
+    <ListView
+        android:id="@+id/LV_desejos_alt"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1" />
+</LinearLayout>

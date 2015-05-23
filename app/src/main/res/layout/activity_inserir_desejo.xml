@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_produto_insert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_produto"
+        android:textIsSelectable="false"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_categoria_insert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_categoria"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_preco_min_insert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_preco_min"
+        android:numeric="decimal"
+        android:phoneNumber="false"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_preco_max_insert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_preco_max"
+        android:textSize="15sp"
+        android:numeric="decimal" />
+
+    <EditText
+        android:id="@+id/et_loja_achar_insert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_loja"
+        android:textSize="15sp" />
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/LV_desejos_add"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

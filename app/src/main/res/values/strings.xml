@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lista de Desejos</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_aboult">Sobre</string>
+    <string name="title_activity_adicionar_desejos">Inserir Desejos</string>
+    <string name="title_activity_custom_sqlite_open_helper">CustomSQLiteOpenHelper</string>
+    <string name="title_activity_detalhes">Detalhes</string>
+    <string name="title_activity_lista_desejos">Desejos</string>
+    <string name="title_activity_alterar_desejos">Alterar Desejos</string>
+    <string name="title_activity_excluir__desejos">Excluir Desejos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_inserir__desejos">Inserir Desejos</string>
+    <string name="title_activity_alterar__desejo">Alterar Desejo</string>
+    <string name="acao_compartilhar">Compartilhar</string>
+    <string name="texto_compartilhar">Teste</string>
+    <string name="et_produto">Digite o Produto</string>
+    <string name="et_categoria">Digite a categoria</string>
+    <string name="et_preco_min">Preço minímo</string>
+    <string name="et_preco_max">Digite preço maxímo</string>
+    <string name="et_loja">Loja onde achar</string>
+    <string name="produto_texto">Produto:</string>
+    <string name="categoria_texto">Categoria:</string>
+    <string name="preco_min_texto">Preço minímo</string>
+    <string name="preco_max_texto">Preço Máximo:</string>
+    <string name="loja_texto">Lojas:</string>
+    <string name="img_buscape">0</string>
+    <string name="Selecione_um_desejo">Selecione um desejo para ver seus detalhes.</string>
+
+
+</resources>

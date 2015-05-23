@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.pedro.listadedesejos.Excluir_Desejo">
+
+    <item android:id="@+id/excluir_menu"
+        android:title="@string/app_name"
+        android:icon="@drawable/ic_action_discard"
+        app:showAsAction="ifRoom" />
+</menu>
