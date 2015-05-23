@@ -30,13 +30,13 @@ public class Desejos {
         db = banco_desejos.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
-        cv.put(banco_desejos.COLUNA_PRODUTO, desejo.getProduto());
-        cv.put(banco_desejos.COLUNA_CATEGORIA, desejo.getCategoria());
-        cv.put(banco_desejos.COLUNA_PRECO_MIN, desejo.getPrecoMin());
-        cv.put(banco_desejos.COLUNA__PRECO_MAX, desejo.getPrecoMax());
-        cv.put(banco_desejos.COLUNA_LOJA, desejo.getLoja());
+        cv.put(Banco_Desejos.COLUNA_PRODUTO, desejo.getProduto());
+        cv.put(Banco_Desejos.COLUNA_CATEGORIA, desejo.getCategoria());
+        cv.put(Banco_Desejos.COLUNA_PRECO_MIN, desejo.getPrecoMin());
+        cv.put(Banco_Desejos.COLUNA__PRECO_MAX, desejo.getPrecoMax());
+        cv.put(Banco_Desejos.COLUNA_LOJA, desejo.getLoja());
 
-        db.insert(banco_desejos.TABELA_DESEJOS, null, cv);
+        db.insert(Banco_Desejos.TABELA_DESEJOS, null, cv);
         db.close();
         return;
     }
@@ -44,7 +44,7 @@ public class Desejos {
     public void delete(Desejo desejo){
         db = banco_desejos.getWritableDatabase();
         long id = desejo.getId();
-        db.delete(banco_desejos.TABELA_DESEJOS, banco_desejos.COLUNA_ID + " =" + id, null);
+        db.delete(Banco_Desejos.TABELA_DESEJOS, Banco_Desejos.COLUNA_ID + " =" + id, null);
         return;
     }
 
@@ -53,28 +53,28 @@ public class Desejos {
         db = banco_desejos.getWritableDatabase();
         ContentValues cv = new ContentValues();
         //cv.put(banco_desejos.COLUNA_ID, id);
-        cv.put(banco_desejos.COLUNA_PRODUTO, produto);
-        cv.put(banco_desejos.COLUNA_CATEGORIA, categoria);
-        cv.put(banco_desejos.COLUNA_PRECO_MIN, precoMin);
-        cv.put(banco_desejos.COLUNA__PRECO_MAX, precoMax);
-        cv.put(banco_desejos.COLUNA_LOJA, loja);
+        cv.put(Banco_Desejos.COLUNA_PRODUTO, produto);
+        cv.put(Banco_Desejos.COLUNA_CATEGORIA, categoria);
+        cv.put(Banco_Desejos.COLUNA_PRECO_MIN, precoMin);
+        cv.put(Banco_Desejos.COLUNA__PRECO_MAX, precoMax);
+        cv.put(Banco_Desejos.COLUNA_LOJA, loja);
 
-        db.update(banco_desejos.TABELA_DESEJOS, cv, banco_desejos.COLUNA_ID + " =" + id, null);
+        db.update(Banco_Desejos.TABELA_DESEJOS, cv, Banco_Desejos.COLUNA_ID + " =" + id, null);
         db.close();
     }
 
 
     public List<Desejo> getALLDesejos(){
         db = banco_desejos.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + banco_desejos.TABELA_DESEJOS, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + Banco_Desejos.TABELA_DESEJOS, null);
 
         List<Desejo> desejos = new ArrayList<>();
         while (cursor.moveToNext()){
-            String produto = cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_PRODUTO));
-            String categoria = cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_CATEGORIA));
-            String precoMin = cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_PRECO_MIN));
-            String precoMax = cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA__PRECO_MAX));
-            String loja = cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_LOJA));
+            String produto = cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_PRODUTO));
+            String categoria = cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_CATEGORIA));
+            String precoMin = cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_PRECO_MIN));
+            String precoMax = cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA__PRECO_MAX));
+            String loja = cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_LOJA));
 
             Desejo desejo = new Desejo(produto, categoria, precoMin, precoMax, loja);
             desejos.add(desejo);
@@ -87,7 +87,7 @@ public class Desejos {
     public Boolean VerificaRegistro() {
         try {
             db = banco_desejos.getReadableDatabase();
-            Cursor cursor = db.rawQuery("SELECT * FROM " + banco_desejos.TABELA_DESEJOS, null);
+            Cursor cursor = db.rawQuery("SELECT * FROM " + Banco_Desejos.TABELA_DESEJOS, null);
             if (cursor.getCount() != 0) {
                 cursor.moveToFirst();
                 cursor.close();
@@ -103,7 +103,7 @@ public class Desejos {
 
     public Cursor getCursor(){
         db = banco_desejos.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + banco_desejos.TABELA_DESEJOS, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + Banco_Desejos.TABELA_DESEJOS, null);
         if (cursor != null){
             cursor.moveToFirst();
         }

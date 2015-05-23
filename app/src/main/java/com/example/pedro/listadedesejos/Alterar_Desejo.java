@@ -109,15 +109,15 @@ public class Alterar_Desejo extends ActionBarActivity {
 
     public void Setar_Dados(long Posicao) {
         try{
-            db = openOrCreateDatabase(banco_desejos.NOME_BANCO, MODE_PRIVATE, null);
-            Cursor cursor = db.rawQuery("SELECT * FROM " + banco_desejos.TABELA_DESEJOS + " WHERE _id = '" + Posicao + "'", null);
+            db = openOrCreateDatabase(Banco_Desejos.NOME_BANCO, MODE_PRIVATE, null);
+            Cursor cursor = db.rawQuery("SELECT * FROM " + Banco_Desejos.TABELA_DESEJOS + " WHERE _id = '" + Posicao + "'", null);
             while (cursor.moveToNext()){
-                TV_ID.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_ID)));
-                ET_Produto.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_PRODUTO)));
-                ET_Categoria.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_CATEGORIA)));
-                ET_PrecoMin.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_PRECO_MIN)));
-                ET_PrecoMax.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA__PRECO_MAX)));
-                ET_Loja.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_LOJA)));
+                TV_ID.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_ID)));
+                ET_Produto.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_PRODUTO)));
+                ET_Categoria.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_CATEGORIA)));
+                ET_PrecoMin.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_PRECO_MIN)));
+                ET_PrecoMax.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA__PRECO_MAX)));
+                ET_Loja.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_LOJA)));
             }
             cursor.close();
         }catch (Exception e){

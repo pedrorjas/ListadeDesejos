@@ -56,15 +56,15 @@ public class Excluir_Desejo extends ActionBarActivity {
     /* função seleciona os dados para exclusão ==========================================*/
     public void Setar_Dados(long Posicao) {
         try{
-            db = openOrCreateDatabase(banco_desejos.NOME_BANCO, MODE_PRIVATE, null);
-            Cursor cursor = db.rawQuery("SELECT * FROM " + banco_desejos.TABELA_DESEJOS + " WHERE _id = '" + Posicao + "'", null);
+            db = openOrCreateDatabase(Banco_Desejos.NOME_BANCO, MODE_PRIVATE, null);
+            Cursor cursor = db.rawQuery("SELECT * FROM " + Banco_Desejos.TABELA_DESEJOS + " WHERE _id = '" + Posicao + "'", null);
             while (cursor.moveToNext()){
-                ID.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_ID)));
-                PRODUTO.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_PRODUTO)));
-                CATEGORIA.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_CATEGORIA)));
-                PRECOMIN.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_PRECO_MIN)));
-                PRECOMAX.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA__PRECO_MAX)));
-                LOJA.setText(cursor.getString(cursor.getColumnIndex(banco_desejos.COLUNA_LOJA)));
+                ID.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_ID)));
+                PRODUTO.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_PRODUTO)));
+                CATEGORIA.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_CATEGORIA)));
+                PRECOMIN.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_PRECO_MIN)));
+                PRECOMAX.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA__PRECO_MAX)));
+                LOJA.setText(cursor.getString(cursor.getColumnIndex(Banco_Desejos.COLUNA_LOJA)));
             }
             cursor.close();
         }catch (Exception e){

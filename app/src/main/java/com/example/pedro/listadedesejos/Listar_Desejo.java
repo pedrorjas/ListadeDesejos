@@ -57,8 +57,8 @@ public class Listar_Desejo extends ActionBarActivity{
     /* função seleciona os dados para edição ==========================================*/
     public void Setar_Dados_Detalhes(long Posicao) {
         try{
-            db = openOrCreateDatabase(banco_desejos.NOME_BANCO, MODE_PRIVATE, null);
-            cursor = db.rawQuery("SELECT * FROM " +banco_desejos.TABELA_DESEJOS+ " WHERE _id = '"+Posicao+"'", null);
+            db = openOrCreateDatabase(Banco_Desejos.NOME_BANCO, MODE_PRIVATE, null);
+            cursor = db.rawQuery("SELECT * FROM " + Banco_Desejos.TABELA_DESEJOS + " WHERE _id = '"+Posicao+"'", null);
 
             while (cursor.moveToNext()){
                 PRODUTO.setText(cursor.getString(cursor.getColumnIndex("produto")));
@@ -117,7 +117,7 @@ public class Listar_Desejo extends ActionBarActivity{
             //cria uma intent com conteudo dos text view
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, cursor.getColumnIndex(banco_desejos.COLUNA_PRODUTO.toString()));
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, cursor.getColumnIndex(Banco_Desejos.COLUNA_PRODUTO.toString()));
             //shareIntent.putExtra(Intent.EXTRA_TEXT, PRODUTO.getText());
 
             mShareActionProvider.setShareIntent(shareIntent);
