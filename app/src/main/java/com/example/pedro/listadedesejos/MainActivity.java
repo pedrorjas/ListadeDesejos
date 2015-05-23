@@ -12,11 +12,6 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 
-    String NomeBanco = "Desejos";
-    SQLiteDatabase BancoDados = null;
-    Cursor cursor;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
